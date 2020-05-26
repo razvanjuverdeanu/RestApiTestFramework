@@ -11,14 +11,15 @@ public class RestAssuredHelper {
 
     public Response SelectMethodAndSendRequest(RequestMethod requestMethod, String url, String modelAsString) {
 
+        Response response = null;
+
         RequestSpecification requestSpecification = RestAssured.given();
         requestSpecification.header(RestAssuredConstants.CONTENT_TYPE, RestAssuredConstants.APPLICATION_JSON);
+
 
         if (modelAsString != null) {
             requestSpecification.body(modelAsString);
         }
-
-        Response response = null;
 
         switch (requestMethod) {
             case GET:

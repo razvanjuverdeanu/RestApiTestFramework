@@ -8,7 +8,7 @@ public class Employee {
     private String profile_image;
 
     public Employee(String profile_image, String employee_name, String employee_salary, String id, String employee_age) {
-        setProfile_image(profile_image);
+        setProfileImage(profile_image);
         setName(employee_name);
         setSalary(employee_salary);
         setId(id);
@@ -31,7 +31,7 @@ public class Employee {
         this.employee_age = employee_age;
     }
 
-    public void setProfile_image(String profile_image) {
+    public void setProfileImage(String profile_image) {
         this.profile_image = profile_image;
     }
 
