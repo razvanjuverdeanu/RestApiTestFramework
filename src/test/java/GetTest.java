@@ -10,16 +10,16 @@ import static Constants.Constants.*;
 public class GetTest extends BaseTest {
 
     private final String name = "Tiger Nixon";
-    private final String salary = "320800";
-    private final String id = "1";
-    private final String age = "61";
+    private final Integer salary = 320800;
+    private final Integer id = 1;
+    private final Integer age = 61;
 
     @Test
     public void testGetEmployee() {
         Response response = restAssuredHelper.SelectMethodAndSendRequest(RequestMethod.GET, EMPLOYEE_ID_PATH, null);
         AssertStatusCode(response, StatusCodeConstants.OK);
 
-        Employee employee = new Employee("", name, salary, id, age);
+        Employee employee = new Employee(PROFILE_IMAGE, name, salary, id, age);
         AssertMapContent(employee, response);
     }
 

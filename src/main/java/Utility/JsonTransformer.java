@@ -24,7 +24,6 @@ public class JsonTransformer {
     }
 
     public Map<?, ?> transformObjectToMap(Object object) {
-        Map<?, ?> mapObject = objectMapper.convertValue(object, Map.class);
-        return mapObject;
+        return objectMapper.convertValue(object, Map.class);
     }
 }

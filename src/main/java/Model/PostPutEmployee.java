@@ -1,9 +1,16 @@
 package Model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class PostPutEmployee {
 
+    @JsonProperty("name")
     private String name;
+
+    @JsonProperty("salary")
     private String salary;
+
+    @JsonProperty("age")
     private String age;
 
     public PostPutEmployee(String name, String salary, String age) {
